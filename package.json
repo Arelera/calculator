@@ -1,0 +1,22 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A simple javascript calculator.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w sass/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arelera/calculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arelera/calculator/issues"
+  },
+  "homepage": "https://github.com/Arelera/calculator#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

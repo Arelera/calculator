@@ -1,0 +1,87 @@
+$light-color: #eee;
+$light-shade-color: hsl(0, 0%, 85%);
+
+$bg-light: #f4fffd;
+$dark-color: #011936;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: $dark-color;
+}
+
+#calculator {
+  height: 100vh;
+  background: linear-gradient(120deg, $bg-light, $dark-color);
+}
+
+#buttons {
+  position: relative; //centering
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); //
+
+  width: 400px;
+  height: 592px; // shiiet
+  border-radius: 20px;
+  overflow: hidden; // stops corners from coming out
+
+  #display {
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background: #dadada30;
+    #operation {
+      font-size: 1.2rem;
+      color: $light-color;
+      padding: 0.25rem;
+      height: 2.1rem;
+    }
+
+    #result {
+      color: $light-color;
+      font-size: 1.6rem;
+      height: 2.4rem;
+      padding: 0.25rem;
+    }
+  }
+
+  div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &:nth-child(2) {
+      .btn:first-child {
+        // making the clear button 2 blocks wide
+        grid-column: 1/3;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  outline: none;
+  border-style: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  background: $light-color;
+
+  transition: all 0.15s ease;
+  &:hover {
+    background: $light-shade-color;
+  }
+}
+
+.operation {
+  color: #7d83ff;
+}
+
+.del-clear {
+  color: #ed254e;
+}
